@@ -7,17 +7,11 @@ pipeline{
 	
 	stages{
 		
-		stage('Initialize'){
-        steps {
-                def dockerHome = tool 'docker'
-                env.PATH = "${dockerHome}/bin:${env.PATH}"                }
-        }
-	
 		stage("Docker & MVN Install"){
 			
 		agent {
         	docker {
-		    	image 'maven:3.6.3-jdk-11'
+		    	image 'maven:3.6.3'
 				reuseNode true
 	     	}
       	}
