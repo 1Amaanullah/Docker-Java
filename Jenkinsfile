@@ -4,13 +4,19 @@ pipeline{
 	
 	stages{
 	
-		stage("build"){
+		stage("Docker & MVN Install"){
 		
-			steps{
-					echo 'building app'
+				agent {
+					docker {
+						image 'maven:3.6.3-jdk-11'
+						}
+					}
+				steps{
+					sh'mvn -DskipTests clean install'
 				}
-		
 			}
+				
+		
 			
 			stage("Deploy"){
 		
