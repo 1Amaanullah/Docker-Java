@@ -6,8 +6,10 @@ pipeline{
 
   }
 	
+	stages{
 		
 		stage("Docker & MVN Install"){
+			
 		agent {
         	docker {
 		    	image 'maven:3.6.3'
