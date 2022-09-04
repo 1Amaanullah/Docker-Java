@@ -6,7 +6,7 @@ COPY /target/DockerSpringBoot-0.0.1.jar DockerSpringBoot-0.0.1.jar
 
 EXPOSE 8080
 #Give Entry point ie how to execute
-ENTRYPOINT [ "java","-jar","DockerSpringBoot-0.0.1.jar" ]
+ENTRYPOINT [ "java","-jar","dockerspringboot-0.0.1.jar" ]
 #Commands
 #To Build Docker Image use Command
 #docker build -f (FileName) Dockerfile -t (TagName can be anything) DockerSpringBoot .(File Present in Root directory)
