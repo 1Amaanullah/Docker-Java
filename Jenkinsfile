@@ -10,7 +10,7 @@ pipeline{
 	stages{
 		
 		stage("Docker & MVN Install"){
-			
+			sh ''' sudo chmod 666 /var/run/docker.sock '''
 		agent {
         	docker {
 		    	image 'maven:3.6.3'
