@@ -3,6 +3,7 @@ pipeline{
 	
 	tools {
     maven 'M3'
+    'org.jenkinsci.plugins.docker.commons.tools.DockerTool' 'docker'
 
   }
 	
