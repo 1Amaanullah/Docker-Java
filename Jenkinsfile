@@ -8,12 +8,14 @@ pipeline{
   }
 	
 	stages{
-		
-		stage("Docker & MVN Install"){
-		
-		steps{
+	  
+	  stage("Command Of Ubunti"){
+	    	steps{
 		  	sh ''' sudo chmod 666 /var/run/docker.sock '''
 		}
+	  }
+		
+		stage("Docker & MVN Install"){
 		
 		agent {
         	docker {
